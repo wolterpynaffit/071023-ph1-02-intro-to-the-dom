@@ -10,6 +10,8 @@
 // <script defer src="practice.js" charset="utf-8"></script>
 // this will allow you to write in this file and see changes on the DOM
 
+// for all the instructions below work in this file, don't amend the html to get your results
+
 // create a new div with an id of .movie-posters and append it to the body
 
 // do this three times:
