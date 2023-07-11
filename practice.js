@@ -1,6 +1,8 @@
 // // PAIR PROGRAMMING PRACTICE // //
 // wait until groups have been assigned before you attempt these challenges!
 // fork and clone this repo and follow the instructions in this file
+// if you've already forked and cloned then feel free to create your own practice.js
+// file and copy these intructions into your file
 
 
 // // GETTING STARTED // //
