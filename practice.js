@@ -1,45 +1,83 @@
-// // PAIR PROGRAMMING PRACTICE // //
-// wait until groups have been assigned before you attempt these challenges!
-// fork and clone this repo and follow the instructions in this file
-// if you've already forked and cloned then feel free to create your own practice.js
-// file and copy these intructions into your file
+const posters = document.createElement('div')
+// const newDiv = posters.className = ".movie-posters"
+posters.id = "movie-posters"
+document.body.append(posters)
+
+/*------------------------ Movie 1: JURASSIC PARK -----------------------------*/ 
+const containerOne = document.createElement('div')
+posters.append(containerOne)
 
 
-// // GETTING STARTED // //
-// To get started, add this line of code to the index.html somewhere in the <head> tag:
-// <script defer src="practice.js" charset="utf-8"></script>
-// this will allow you to write in this file and see changes on the DOM
-
-// for all the instructions below work in this file, don't amend the html to get your results
-
-// create a new div with an id of .movie-posters and append it to the body
-
-// do this three times:
-
-// find a movie poster you like and add it as an <img> inside the .movie-poster div
-
-// beneath each <img> add the movie title as an <h2>
-
-// further refine the movie posters:
-// each movie poster gets its own <div> which includes the poster <img>, the title <h2>
-// and a short description <p>
-
-// once you have the movie posters can you...
-
-// console.log the title and description for the first movie poster?
-
-// change the <img> src, title text, and description text for the second movie poster?
-
-// delete the last movie poster?
+const imageOne = document.createElement('img')
+imageOne.src  = "https://m.media-amazon.com/images/I/81AGqBcpYOL._AC_UF894,1000_QL80_.jpg"
+containerOne.append(imageOne)
+const titleOne = document.createElement('h2')
+titleOne.textContent = "Jurassic Park"
+containerOne.append(titleOne)
+const descriptionOne = document.createElement('p')
+descriptionOne.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia esse explicabo aut quidem? Veritatis, illo temporibus? Nesciunt animi, est repudiandae laboriosam quod expedita veniam nulla. Corrupti fuga quis architecto expedita est, voluptatum quasi sequi molestiae earum obcaecati veniam alias tempora culpa similique consectetur autem sapiente veritatis deleniti nulla nostrum sunt! Optio saepe itaque aliquam ab esse ut, porro veniam accusantium laboriosam autem dolorem laborum placeat? Inventore dolorem odit nemo, quidem reiciendis illum iure, illo porro eveniet velit, tenetur minus quae architecto consequuntur recusandae ipsa aut fugiat tempora minima maxime corrupti non. Obcaecati dolorem ipsam optio deleniti ipsum pariatur officiis inventore!"
+containerOne.append(descriptionOne)
 
 
+console.log()
 
-// // HINTS // //
+/*---------------------------- Movie 2: HOOK  -----------------------------*/ 
+const containerTwo = document.createElement('div')
+posters.append(containerTwo)
 
-// given that adding movie posters is a repetetive task, it may be easier to build
-// a function that takes in certain arguments and does the work for you...
+const imageTwo = document.createElement('img')
+imageTwo.src = " https://flxt.tmsimg.com/assets/p13606_p_v10_am.jpg"
+imageTwo.style.width = "45rem"
+containerTwo.append(imageTwo)
+const titleTwo = document.createElement('h2')
+titleTwo.textContent = "Hook"
+containerTwo.append(titleTwo)
+const descriptionTwo = document.createElement('p')
+descriptionTwo.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia esse explicabo aut quidem? Veritatis, illo temporibus? Nesciunt animi, est repudiandae laboriosam quod expedita veniam nulla. Corrupti fuga quis architecto expedita est, voluptatum quasi sequi molestiae earum obcaecati veniam alias tempora culpa similique consectetur autem sapiente veritatis deleniti nulla nostrum sunt! Optio saepe itaque aliquam ab esse ut, porro veniam accusantium laboriosam autem dolorem laborum placeat? Inventore dolorem odit nemo, quidem reiciendis illum iure, illo porro eveniet velit, tenetur minus quae architecto consequuntur recusandae ipsa aut fugiat tempora minima maxime corrupti non. Obcaecati dolorem ipsam optio deleniti ipsum pariatur officiis inventore!"
+containerTwo.append(descriptionTwo)
 
-// remember that you need a few steps in order to finally see a dom element on the page:
-// create the element
-// change attributes like text or src
-// append the element
+/*------------------------  Movies: THE GOONIES -----------------------------*/ 
+const containerThree = document.createElement('div')
+posters.append(containerThree)
+
+const imageThree = document.createElement('img')
+imageThree.src = "https://m.media-amazon.com/images/I/6198vp6P7nL._AC_UF894,1000_QL80_.jpg"
+containerThree.append(imageThree)
+const titleThree = document.createElement('h3')
+titleThree.textContent = "The Goonies"
+containerThree.append(titleThree)
+const descriptionThree = document.createElement('p')
+descriptionThree.textContent = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia esse explicabo aut quidem? Veritatis, illo temporibus? Nesciunt animi, est repudiandae laboriosam quod expedita veniam nulla. Corrupti fuga quis architecto expedita est, voluptatum quasi sequi molestiae earum obcaecati veniam alias tempora culpa similique consectetur autem sapiente veritatis deleniti nulla nostrum sunt! Optio saepe itaque aliquam ab esse ut, porro veniam accusantium laboriosam autem dolorem laborum placeat? Inventore dolorem odit nemo, quidem reiciendis illum iure, illo porro eveniet velit, tenetur minus quae architecto consequuntur recusandae ipsa aut fugiat tempora minima maxime corrupti non. Obcaecati dolorem ipsam optio deleniti ipsum pariatur officiis inventore!'
+containerThree.append(descriptionThree)
+
+
+
+
+function newPoster(url, title, description){
+
+     /*-----------Container--------------*/ 
+   const container = document.createElement('div')
+   document.body.append(container)
+
+
+    /*-------------Image---------------*/ 
+    const picTag = document.createElement('img')
+    container.append(picTag)
+    picTag.src = url
+    picTag.style.width ="45rem"
+
+
+    /*-------------Title---------------*/ 
+    const titleTag = document.createElement('h2')
+    titleTag.textContent = title
+    container.append(titleTag)
+     /*-------------Description------------*/ 
+    const desTag = document.createElement('p')
+    desTag.textContent = description
+    container.append(desTag)
+}
+
+newPoster('https://m.media-amazon.com/images/M/MV5BMjM2MDE4OTQwOV5BMl5BanBnXkFtZTgwNjgxMTg2NzE@._V1_.jpg', "Labryinth", "this is the description nulla. Corrupti fuga quis architecto expedita est, voluptatum quasi sequi molestiae earum obcaecati veniam alias tempora culpa similique consectetur autem sapiente veritatis deleniti nulla nostrum sunt! Optio saepe itaque aliquam ab esse ut, porro veniam accusantium laboriosam autem dolorem laborum placeat? Inventore dolorem odit nemo, quidem reiciendis illum iure, illo porro eveniet velit, "
+)
+
+    
